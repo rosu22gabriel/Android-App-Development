@@ -1,6 +1,7 @@
 package com.example.cinema;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cinema {
     private String nume;
@@ -35,6 +36,10 @@ public class Cinema {
 
     public void setTabelaFilme(List<Film> tabelaFilme) {
         this.tabelaFilme = tabelaFilme;
+    }
+
+    public List<String> getTabelaNumeFilme() {
+        return tabelaFilme.stream().map(Film::getDenumire).collect(Collectors.toList());
     }
 
     @Override

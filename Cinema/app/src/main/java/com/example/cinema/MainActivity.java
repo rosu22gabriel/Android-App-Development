@@ -1,10 +1,13 @@
 package com.example.cinema;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,16 +19,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class MainActivity extends AppCompatActivity {
 
     Button button2;
+    Spinner spinner;
     String value="hello man";
 
     Cinema cinema;
     Film film;
     List<Actor> listaActori = new ArrayList<>();
     List<Film> tabelaFilme = new ArrayList<>();
+    List<Cinema> listaCinemauri = new ArrayList<>();
+
+    List<String> listaNumeCinemauri = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
         film = new Film("Apocalypse Now", 3.2F, listaActori, "Francis Ford Coppola");
 
+        // the list will be empty after this call
+        listaActori.clear();
+
+        tabelaFilme.add(film);
+
+        listaActori.add(new Actor(66, "Matthew Modine"));
+        listaActori.add(new Actor(63, "Adam Baldwin"));
+
+        film = new Film("Full Metal Jacket", 1.9F, listaActori, "Stanley Kubrick");
+
         tabelaFilme.add(film);
 
         cinema = new Cinema("Unirea", "Pietonalul Unirii Botosani", tabelaFilme);
@@ -52,9 +70,33 @@ public class MainActivity extends AppCompatActivity {
                 .filter(actor -> actor.getVarsta() < 60)
                 .map(Actor::getNume).collect(Collectors.toList());
 
+        List<String> output2 = tabelaFilme.stream()
+                .filter(film -> film.getDenumire() == "Full Metal Jacket")
+                .map(Film::getNumeRegizor)
+                .collect(Collectors.toList());
+
+
         Log.d("Cinema si film", "Cinema: " + cinema.getNume() + "ruleaza filmele: " + cinema.getTabelaFilme());
 
         Log.d("Actor cu varsta mai mica de 40 de ani:", "" + output);
+
+        Log.d("Regizorul filmului \"Full Metal Jacket\" este", "" + output2);
+
+
+        //Cinema::getNume referinta la metoda
+        listaNumeCinemauri = listaCinemauri.stream().map(Cinema::getNume).collect(Collectors.toList());
+
+        // Splitting declaration and initialization is needed
+        spinner = (Spinner)findViewById(R.id.spinner);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_spinner_item,
+                listaNumeCinemauri
+        );
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
 
         button2 = (Button)findViewById(R.id.button2);
 
@@ -67,7 +109,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 }

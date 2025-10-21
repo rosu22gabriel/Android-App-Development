@@ -2,4 +2,6 @@
     <string name="app_name">Cinema</string>
     <string name="afiseaza_lista_filme">Afiseaza lista filme</string>
     <string name="button">Intoarce-te la pagina principala</string>
+    <string name="lista_cinemauri">Lista cinemauri</string>
+
 </resources>
