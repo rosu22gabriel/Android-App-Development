@@ -3,5 +3,11 @@
     <string name="afiseaza_lista_filme">Afiseaza lista filme</string>
     <string name="button">Intoarce-te la pagina principala</string>
     <string name="lista_cinemauri">Lista cinemauri</string>
+    <string name="textview">TextView</string>
+    <string name="last_nume_input">Nume</string>
+    <string name="first_name_input">Prenume</string>
+    <string name="birth_date_input">Data de nastere</string>
+    <string name="country_input">Tara</string>
+    <string name="apply_button">Aplica</string>
 
 </resources>
