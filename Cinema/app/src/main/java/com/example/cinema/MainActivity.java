@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -90,14 +91,24 @@ public class MainActivity extends AppCompatActivity {
         // Splitting declaration and initialization is needed
         spinner = (Spinner)findViewById(R.id.spinner);
 
+        // ArrayAdapter - sursa de date simpla
+        // ArrayList, Array etc
+        // Obiecte de orice tip
+
+        // Constructor: - contextul(activitate)
+        // - Identificatorul resursei de tip macheta asociat unui element din lista
+        // - Identificatorul controlului de tip TextView (daca este cazul)
+        // - siruri de elemente
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_spinner_item,
                 listaNumeCinemauri
         );
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Adapter: asigura legatura dintre sursa de date si controale de tip lista de elemente
+        // Gestioneaza componentele vizuale care trebuie afisate in cadrul colectiei
+        // Creeaza pentru fiecare elemenet din sursa de date care trebuie afisat
         spinner.setAdapter(adapter);
-
 
 
         button2 = (Button)findViewById(R.id.button2);
@@ -108,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 intent.putExtra("key", value);
                 startActivity(intent);
-
             }
         });
     }

@@ -9,5 +9,8 @@
     <string name="birth_date_input">Data de nastere</string>
     <string name="country_input">Tara</string>
     <string name="apply_button">Aplica</string>
+    <string name="radio_button_student_elev">Student/Elev</string>
+    <string name="radio_button_pensionar">Pensionar</string>
+    <string name="radio_button_normal">Normal</string>
 
 </resources>
