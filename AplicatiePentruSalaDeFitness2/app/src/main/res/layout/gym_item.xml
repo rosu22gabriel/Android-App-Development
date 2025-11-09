@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <!-- Macheta a unei sali cu datele despre program, nume, poza, si facilitati -->
+    
+    <ImageView
+        android:id="@+id/gym_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/description_imagine_a_salii"
+        android:src="@drawable/ic_gym_placeholder">
+    </ImageView>
+
+    <!-- Zona cu detaliile text: program, nume, facilitati-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Numele salii -->
+        <TextView
+            android:id="@+id/gym_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gym_name"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <!-- Program -->
+        <TextView
+            android:id="@+id/gym_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gym_schedule"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <!-- Facilitati -->
+        <TextView
+            android:id="@+id/gym_facilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gym_facilities"
+            android:textColor="@color/gray"
+            android:textSize="14sp">
+        </TextView>
+
+        <!-- Contact -->
+        <TextView
+            android:id="@+id/gym_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gym_contact">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details_button_text">
+        </Button>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="0dp">
+        </Space>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_button_text">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

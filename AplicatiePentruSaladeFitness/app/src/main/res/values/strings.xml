@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Aplicatie-Pentru-Sala-de-Fitness</string>
+    <string name="log_in_string">LOG IN</string>
+    <string name="become_a_member_string">BECOME A MEMBER</string>
+    <string name="email_input">Email</string>
+    <string name="pincode_input">Pincode</string>
+    <string name="img_description">O imagine simpla pentru UI </string>
+    <string-array name="orase_array">
+        <item>Iasi</item>
+        <item>Bucuresti</item>
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Aplicatie-Pentru-Sala-De-Fitness</string>
+    <string name="content_description_user_icon">O imagine simpla pentru UI</string>
+    <string name="email_input_string">Email</string>
+    <string name="log_in_button_text">LOG IN</string>
+    <string name="become_a_member_button_text">BECOME A MEMBER</string>
+    <string name="pincode_input_hint_text">Pincode</string>
+    <string name="description_imagine_a_salii">Imagine a salii</string>
+    <string name="gym_name">Numele salii</string>
+    <string name="gym_schedule">Programul salii</string>
+    <string name="gym_facilities">Cardio, Weights, Sauna</string>
+    <string name="details_button_text">Detalii</string>
+    <string name="choose_button_text">Choose</string>
+    <string name="gym_contact">0712-034-627</string>
+</resources>

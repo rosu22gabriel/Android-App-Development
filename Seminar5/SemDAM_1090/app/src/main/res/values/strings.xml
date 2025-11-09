@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SemDAM_1090</string>
+    <string name="data">Data:</string>
+    <string name="eur">EUR:</string>
+    <string name="usd">USD:</string>
+    <string name="gbp">GBP:</string>
+    <string name="xau">XAU:</string>
+    <string name="afisare_curs_valutar">Afisare curs valutar</string>
+    <string name="introduceti_destinatia">Introduceti destinatia!</string>
+    <string name="introduceti_data_zborului">Introduceti data zborului!</string>
+    <string name="introduceti_pretul">Introduceti pretul!</string>
+    <string name="selectati_compania">Selectati compania</string>
+    <string name="clasa_bilet">Clasa bilet</string>
+    <string name="adauga_bilet">Adauga bilet</string>
+    <string name="activitate_bnr">Activitate BNR</string>
+    <string name="extrage_date_din_xml">Extrage date din XML</string>
+    <string name="extrage_date_din_json">Extrage date din JSON</string>
+    <string name="vizualizare_baza_de_date">Vizualizare baza de date</string>
+</resources>

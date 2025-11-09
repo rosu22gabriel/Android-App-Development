@@ -1,0 +1,24 @@
+Aplicatie pentru sala de fitness - Rosu Gabriel 1089-D
+
+LoginActivity - este activitatea unde utilizatorul introduce datele (email, pincode) pentru conectare
+                daca acesta are cont deja
+              - daca nu, acesta poate apasa pe butonul "Become Member" unde se va duce in activitatea BecomeMemberActivity
+
+BecomeMemberActivity - este activitatea unde utilizatorul poate selecta orasul in care doreste sa isi faca abonamentul
+                     - selectia orasului se face printr-un element de tip Spinner
+                     - la selectia orasului sunt afisate salile din acele orase, aceasta avand afisate o poza,
+                       inlocuita cu un placeholder default pentru toate salile, respectiv ic_gym_placeholder.xml
+                       in directorul drawable din directorul res, detalii precum programul, adresa, facilitatile salii si
+                       numarul de telefon
+                     - utilizatorul poate apasa butonul "Detalii" pentru a vedea detalii legate de sala
+                       sau pe butonul "Choose" pentru a-si face abonament la sala respectiva
+                     - salile sunt afisate intr-un RecyclerView pentru a permite afisarea unor machete mai complexe,
+                       acestea continand si un element de tip ImageView
+                     - in directorul layout din directorul res se afla macheta unui astfel de element din interfata
+                       de tip "gym" in gym_item.xml
+                     - pentru a lega datele salii adaugate in cod din BecomeMemberActivity de elementele din interfata
+                       din RecyclerView am creat un adapter personalizat "GymAdapter"
+                       - acesta are un ViewHolder personalizat pentru a putea stoca in View elementele de tip ImageView, TextView
+
+
+Gym, Membership - clase pentru a organiza si manipula datele despre sali si abonamente
