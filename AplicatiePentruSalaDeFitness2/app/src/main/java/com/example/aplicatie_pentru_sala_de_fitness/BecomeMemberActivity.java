@@ -48,6 +48,7 @@ public class BecomeMemberActivity extends AppCompatActivity {
         List<Gym> shownGyms = new ArrayList<>();
 
 
+        // Adaugarea de sali in lista cu toate salile
         allGyms.add(new Gym(
                 "City Gym",
                 "Strada Florilor Nr. 4",
@@ -78,8 +79,22 @@ public class BecomeMemberActivity extends AppCompatActivity {
                 "Premium"
         ));
 
-        // Se afiseaza toate salile
-        shownGyms = new ArrayList<>(allGyms);
+        allGyms.add(new Gym(
+                "Stay Fit Gym",
+                "Strada Iancu Bacalu",
+                "Iasi",
+                Map.of(
+                        "Luni - Vineri", new Pair<>("8:00", "20:00"),
+
+                        "Sambata - Duminica", new Pair<>("10:00", "18:00")
+                ),
+                "0744 123 456",
+                List.of("Fitness", "Group Classes", "cycling", "Cardio"),
+                R.drawable.ic_gym_placeholder,
+                "Standard"
+        ));
+
+
 
 
         // Adapter pentru RecyclerView
@@ -116,6 +131,9 @@ public class BecomeMemberActivity extends AppCompatActivity {
                 String selectedCity = parent.getItemAtPosition(position).toString();
 
                 // Se filtreaza salile in functie de orasul selectat
+
+                // Lista filteredGyms este una temporara pentru a fi folosita
+                // in metoda updateList() a gymAdapter
                 List<Gym> filteredGyms = new ArrayList<>();
                 for (Gym gym : allGyms) {
                     if (gym.getCity().equals(selectedCity)) {
@@ -124,6 +142,7 @@ public class BecomeMemberActivity extends AppCompatActivity {
                 }
 
                 // Se actualizeaza lista de salile afisate in RecyclerView
+                // UpdateList modifica continutul liste shownGyms inauntrul adaptorului
                 gymAdapter.updateList(filteredGyms);
             }
 
@@ -131,7 +150,8 @@ public class BecomeMemberActivity extends AppCompatActivity {
             // Metoda se apeleaza atunci cand utilizatorul nu selecteaza niciun oras
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                // Daca nu e niciun oras selectat, se goleste lista
+                gymAdapter.updateList(new ArrayList<>());
             }
         });
 

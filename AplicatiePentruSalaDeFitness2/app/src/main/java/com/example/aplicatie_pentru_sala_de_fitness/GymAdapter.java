@@ -43,7 +43,8 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
         }
     }
 
-    // OnCreateViewHolder
+    // OnCreateViewHolder este apelata de RecyclerView atunci cand are nevoie
+    // de un nou ViewHolder pentru a afisa un obiect de tip gym
     @Override
     public GymViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
