@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Aplicatie-Pentru-Sala-De-Fitness</string>
     <string name="content_description_user_icon">O imagine simpla pentru UI</string>
-    <string name="email_input_string">Email</string>
+    <string name="email_input_label_string">Email</string>
     <string name="log_in_button_text">LOG IN</string>
     <string name="become_a_member_button_text">BECOME A MEMBER</string>
     <string name="pincode_input_hint_text">Pincode</string>
@@ -11,5 +11,19 @@
     <string name="gym_facilities">Cardio, Weights, Sauna</string>
     <string name="details_button_text">Detalii</string>
     <string name="choose_button_text">Choose</string>
-    <string name="gym_contact">0712-034-627</string>
+    <string name="gym_contact">0712–034–627</string>
+    <string name="setari_cont_string">Setari Cont</string>
+    <string name="schimba_tipul_de_abonament_string">Schimba tipul de abonament</string>
+    <string name="fa_ti_abonament_universal_button_text">Fa-ti cont fara abonament</string>
+    <string name="email_input_hint_text">email@domain.com</string>
+    <string name="first_name_input_label_text">Prenume</string>
+    <string name="email_input_string">\n</string>
+    <string name="first_name_input_hint_text">Prenumele tau</string>
+    <string name="last_name_input_label_text">Nume</string>
+    <string name="last_name_input_hint_text">Numele tau\n</string>
+    <string name="pagina_de_inscriere_string">Pagina de inscriere</string>
+    <string name="inregistreaza_te_button_text">Inregistreaza-te</string>
+    <string name="phone_input_string" />
+    <string name="phone_number_input_hint_text">0721034567</string>
+    <string name="date_de_contact_text">Datele tale de contact</string>
 </resources>

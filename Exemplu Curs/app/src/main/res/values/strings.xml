@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SemDAM_1086</string>
+    <string name="acesta_este_textul_afisat">Acesta este textul afisat</string>
+    <string name="afisare_curs_valutar">Afisare curs valutar</string>
+    <string name="introduceti_firma_producatoare">Introduceti firma producatoare</string>
+    <string name="introduceti_data_fabricatiei">Introduceti data fabricatiei!</string>
+    <string name="introduceti_numarul_de_locuri">Introduceti numarul de locuri</string>
+    <string name="selectati_modelul">Selectati modelul</string>
+    <string name="stare_tehnica_este_defect">Stare tehnica (este defect?)</string>
+    <string name="da">DA</string>
+    <string name="nu">NU</string>
+    <string name="adauga_avion">Adauga avion</string>
+    <string name="activitate_bnr">Activitate BNR</string>
+    <string name="extrage_date_din_xml">Extrage date din XML</string>
+    <string name="extrage_date_din_json">Extrage date din JSON</string>
+    <string name="vizualizare_bd">Vizualizare BD</string>
+</resources>

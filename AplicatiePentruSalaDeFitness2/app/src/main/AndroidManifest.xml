@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicatiePentruSalaDeFitness">
         <activity
+            android:name=".AccountCreatedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".BecomeMemberActivity"
             android:exported="true" />
         <activity

@@ -1,10 +1,12 @@
 package com.example.aplicatie_pentru_sala_de_fitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +25,12 @@ import java.time.LocalTime;
 
 public class BecomeMemberActivity extends AppCompatActivity {
 
+    // Lista cu toate salile disponibile (nefiltrate)
+    List<Gym> allGyms = new ArrayList<>();
+
+    // Lista cu salile afisate in RecyclerView (filtrate)
+    List<Gym> shownGyms = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,18 +42,15 @@ public class BecomeMemberActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Butonul pentru crearea abonamentului universal fara a mai alege sala
+        Button buttonAbonamentUniversal = findViewById(R.id.fa_ti_abonament_universal_button_id);
+
+
+
         // RecyclerView pentru afisarea listei de sali din orasul selectat (Recycler view pentru afisarea unor itemi mai complecsi -> poza, nume, adresa)
         RecyclerView gymsRecyclerView = findViewById(R.id.gyms_recycler_view_id);
 
         gymsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-
-        // Lista cu toate salile disponibile (nefiltrate)
-        List<Gym> allGyms = new ArrayList<>();
-
-        // Lista cu salile afisate in RecyclerView (filtrate)
-        List<Gym> shownGyms = new ArrayList<>();
 
 
         // Adaugarea de sali in lista cu toate salile
@@ -95,16 +100,12 @@ public class BecomeMemberActivity extends AppCompatActivity {
         ));
 
 
-
-
         // Adapter pentru RecyclerView
         GymAdapter gymAdapter = new GymAdapter(shownGyms);
         gymsRecyclerView.setAdapter(gymAdapter);
 
 
         // Spinner pentru selectarea unui oras
-
-        // Inauntrul metodei onCreate()
         Spinner citiesSpinner = findViewById(R.id.cities_spinner_id);
 
         // Lista de orase selectabile in spinner
@@ -153,6 +154,12 @@ public class BecomeMemberActivity extends AppCompatActivity {
                 // Daca nu e niciun oras selectat, se goleste lista
                 gymAdapter.updateList(new ArrayList<>());
             }
+        });
+
+        // Event listenere pentru apasarea butonului pentru crearea abonamentului universal care duce la o pagina de inregistrare - RegisterActivity
+        buttonAbonamentUniversal.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RegisterActivity.class);
+            startActivity(intent);
         });
 
     }

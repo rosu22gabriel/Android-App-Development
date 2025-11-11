@@ -4,6 +4,7 @@ import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +32,8 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
         TextView gymSchedule;
         TextView gymFacilities;
         TextView gymContact;
+        Button chooseButton;
+        Button detailsButton;
 
 
         public GymViewHolder(View itemView) {
@@ -40,6 +43,8 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
             gymSchedule = itemView.findViewById(R.id.gym_schedule);
             gymFacilities = itemView.findViewById(R.id.gym_facilities);
             gymContact = itemView.findViewById(R.id.gym_contact);
+            chooseButton = itemView.findViewById(R.id.choose_button);
+            detailsButton = itemView.findViewById(R.id.details_button);
         }
     }
 

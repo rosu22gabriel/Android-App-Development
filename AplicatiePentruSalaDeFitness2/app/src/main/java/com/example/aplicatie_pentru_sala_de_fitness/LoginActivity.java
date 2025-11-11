@@ -28,7 +28,9 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
+
         Button becomeAMemberButton = findViewById(R.id.become_a_member_button_id);
+
 
         // La apasarea butonului Become A Member porneste activitatea BecomeMemberActivity
         becomeAMemberButton.setOnClickListener(v -> {
@@ -36,13 +38,16 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+
         // Validarea datelor de conectare ale utilizatorului
         EditText emailInput = findViewById(R.id.email_input_id);
         EditText pincodeInput = findViewById(R.id.pincode_input_id);
 
+
         // Valorile text dinauntrul EditText-urilor ca string-uri
         String email = emailInput.getText().toString();
         String pincode = pincodeInput.getText().toString();
+
 
         // Definirea unui model de expresie regulata pentru validarea inputului utilizatorului
 

@@ -1,6 +1,6 @@
 Aplicatie pentru sala de fitness - Rosu Gabriel 1089-D
 
-Aplicatia ruleaza pe un sistem cu API 24 (Android 7.0 Nougat)
+
 
 Gym, Membership - clase pentru a organiza si manipula datele despre sali si abonamente
 

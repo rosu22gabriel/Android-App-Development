@@ -10,13 +10,27 @@
     tools:context=".BecomeMemberActivity">
 
 
-    <Spinner
-        android:id="@+id/cities_spinner_id"
-        android:layout_marginTop="100dp"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center">
-    </Spinner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/fa_ti_abonament_universal_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fa_ti_abonament_universal_button_text">
+        </Button>
+
+        <Spinner
+            android:id="@+id/cities_spinner_id"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center">
+        </Spinner>
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gyms_recycler_view_id"
