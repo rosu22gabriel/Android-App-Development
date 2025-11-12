@@ -1,4 +1,4 @@
-package com.example.aplicatie_pentru_sala_de_fitness;
+package com.example.rosugabriel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.rosugabriel.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

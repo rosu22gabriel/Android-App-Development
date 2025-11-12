@@ -4,4 +4,6 @@
     <item name="log_in_button_id" type="id" />
     <item name="email_input_label_id" type="id" />
     <item name="inregistreaza_te_button_id" type="id" />
+    <item name="phone_number_input_label_id" type="id" />
+    <item name="user_phone_number_id" type="id" />
 </resources>

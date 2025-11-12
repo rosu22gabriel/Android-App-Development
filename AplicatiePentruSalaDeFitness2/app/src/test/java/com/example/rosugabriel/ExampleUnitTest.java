@@ -1,4 +1,4 @@
-package com.example.aplicatie_pentru_sala_de_fitness;
+package com.example.rosugabriel;
 
 import org.junit.Test;
 

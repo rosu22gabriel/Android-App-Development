@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.aplicatie_pentru_sala_de_fitness"
+    namespace = "com.example.rosugabriel"
     compileSdk = 36
 
     defaultConfig {

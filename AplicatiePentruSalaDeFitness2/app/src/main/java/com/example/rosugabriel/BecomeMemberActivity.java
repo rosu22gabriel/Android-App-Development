@@ -1,4 +1,4 @@
-package com.example.aplicatie_pentru_sala_de_fitness;
+package com.example.rosugabriel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +17,11 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rosugabriel.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.time.DayOfWeek;
-import java.time.LocalTime;
 
 public class BecomeMemberActivity extends AppCompatActivity {
 
@@ -41,17 +41,6 @@ public class BecomeMemberActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        // Butonul pentru crearea abonamentului universal fara a mai alege sala
-        Button buttonAbonamentUniversal = findViewById(R.id.fa_ti_abonament_universal_button_id);
-
-
-
-        // RecyclerView pentru afisarea listei de sali din orasul selectat (Recycler view pentru afisarea unor itemi mai complecsi -> poza, nume, adresa)
-        RecyclerView gymsRecyclerView = findViewById(R.id.gyms_recycler_view_id);
-
-        gymsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
 
         // Adaugarea de sali in lista cu toate salile
         allGyms.add(new Gym(
@@ -99,11 +88,14 @@ public class BecomeMemberActivity extends AppCompatActivity {
                 "Standard"
         ));
 
+        // RecyclerView pentru afisarea listei de sali din orasul selectat
+        // (Recycler view pentru afisarea unor itemi mai complecsi -> poza, nume, adresa)
+        RecyclerView gymsRecyclerView = findViewById(R.id.gyms_recycler_view_id);
+        gymsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Adapter pentru RecyclerView
         GymAdapter gymAdapter = new GymAdapter(shownGyms);
         gymsRecyclerView.setAdapter(gymAdapter);
-
 
         // Spinner pentru selectarea unui oras
         Spinner citiesSpinner = findViewById(R.id.cities_spinner_id);
@@ -143,7 +135,7 @@ public class BecomeMemberActivity extends AppCompatActivity {
                 }
 
                 // Se actualizeaza lista de salile afisate in RecyclerView
-                // UpdateList modifica continutul liste shownGyms inauntrul adaptorului
+                // UpdateList modifica continutul listei shownGyms inauntrul adaptorului
                 gymAdapter.updateList(filteredGyms);
             }
 
@@ -156,7 +148,11 @@ public class BecomeMemberActivity extends AppCompatActivity {
             }
         });
 
-        // Event listenere pentru apasarea butonului pentru crearea abonamentului universal care duce la o pagina de inregistrare - RegisterActivity
+        // Butonul pentru crearea abonamentului universal fara a mai alege sala
+        Button buttonAbonamentUniversal = findViewById(R.id.fa_ti_abonament_universal_button_id);
+
+        // Event listener pentru apasarea butonului pentru crearea abonamentului
+        // universal care duce la o pagina de inregistrare - RegisterActivity
         buttonAbonamentUniversal.setOnClickListener(v -> {
             Intent intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);

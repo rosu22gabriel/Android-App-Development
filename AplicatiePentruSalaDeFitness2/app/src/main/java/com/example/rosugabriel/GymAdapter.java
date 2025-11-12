@@ -1,4 +1,4 @@
-package com.example.aplicatie_pentru_sala_de_fitness;
+package com.example.rosugabriel;
 
 import android.util.Pair;
 import android.view.LayoutInflater;
@@ -10,13 +10,16 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rosugabriel.R;
+
 import java.util.List;
 import java.util.Map;
 
 
-// GymAdapter leaga datele salii cu elementele de interfata din RecyclerView
+// GymAdapter este un adaptor personalizat care
+// leaga datele salii cu elementele de interfata din RecyclerView
 
-// Adaptorul GymAdapter extinde RecyclerView.Adapter cu un GymViewHolder custom
+// Adaptorul GymAdapter extinde RecyclerView.Adapter cu un GymViewHolder personalizat
 public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
     private List<Gym> gymList;
 
@@ -27,13 +30,13 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
     // GymViewHolder tine referinte catre fiecare element View al unui obiect de tip
     // gym(gym_item.xml) din interfata
     public static class GymViewHolder extends RecyclerView.ViewHolder {
-        ImageView gymImage;
-        TextView gymName;
-        TextView gymSchedule;
-        TextView gymFacilities;
-        TextView gymContact;
-        Button chooseButton;
-        Button detailsButton;
+        public ImageView gymImage;
+        public TextView gymName;
+        public TextView gymSchedule;
+        public TextView gymFacilities;
+        public TextView gymContact;
+        public Button chooseButton;
+        public Button detailsButton;
 
 
         public GymViewHolder(View itemView) {
@@ -71,7 +74,9 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
 
         for (Map.Entry<String, Pair<String, String>> entry : gymList.get(position).getSchedule().entrySet()) {
             // Se adauga in StringBuilder fiecare entry din map
-            // si se adauga un separator
+            // si se adauga un separator intre elementele din map
+            // pentru a se afisa programul intr-un singur string
+            // de tip: Luni - Vineri: 8:00 - 20:00
             scheduleText.append(entry.getKey())
                     .append(": ")
                     .append(entry.getValue().first)
@@ -89,12 +94,14 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymViewHolder> {
         holder.gymContact.setText(gym.getContact());
     }
 
+
+    // getItemCount() returneaza numarul de elemente disponibile din sursa de date
     @Override
     public int getItemCount() {
         return gymList.size();
     }
 
-    // updateList permite actualizarea listei de salile afisate in RecyclerView
+    // updateList permite actualizarea listei de sali afisate in RecyclerView
     public void updateList(List<Gym> newList) {
         gymList.clear();
         gymList.addAll(newList);

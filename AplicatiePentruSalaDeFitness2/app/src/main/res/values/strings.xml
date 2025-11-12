@@ -12,8 +12,6 @@
     <string name="details_button_text">Detalii</string>
     <string name="choose_button_text">Choose</string>
     <string name="gym_contact">0712–034–627</string>
-    <string name="setari_cont_string">Setari Cont</string>
-    <string name="schimba_tipul_de_abonament_string">Schimba tipul de abonament</string>
     <string name="fa_ti_abonament_universal_button_text">Fa-ti cont fara abonament</string>
     <string name="email_input_hint_text">email@domain.com</string>
     <string name="first_name_input_label_text">Prenume</string>
@@ -26,4 +24,9 @@
     <string name="phone_input_string" />
     <string name="phone_number_input_hint_text">0721034567</string>
     <string name="date_de_contact_text">Datele tale de contact</string>
+    <string name="optiune1_string">Despre</string>
+    <string name="optiune2_string">logout</string>
+    <string name="phone_number_input_label_text">Numarul de telefon</string>
+    <string name="user_email_string">user@domain.com</string>
+    <string name="user_phone_number_string">0723192345</string>
 </resources>

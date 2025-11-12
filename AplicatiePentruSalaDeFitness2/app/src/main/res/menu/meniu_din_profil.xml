@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/optiune1"
-        android:title="@string/setari_cont_string">
+        android:title="@string/optiune1_string">
     </item>
     <item android:id="@+id/optiune2"
-        android:title="@string/schimba_tipul_de_abonament_string">
+        android:title="@string/optiune2_string">
     </item>
 </menu>

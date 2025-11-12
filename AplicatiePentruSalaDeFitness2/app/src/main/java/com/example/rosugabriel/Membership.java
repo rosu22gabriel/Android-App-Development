@@ -1,4 +1,6 @@
-package com.example.aplicatie_pentru_sala_de_fitness;
+package com.example.rosugabriel;
+
+import androidx.annotation.NonNull;
 
 public class Membership {
     private String type; // Basic, Standard, Premium, etc.
@@ -35,6 +37,7 @@ public class Membership {
         this.durationInMonths = durationInMonths;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Membership{" +

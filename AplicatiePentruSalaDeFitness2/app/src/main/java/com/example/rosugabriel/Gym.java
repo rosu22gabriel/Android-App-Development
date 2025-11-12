@@ -1,9 +1,7 @@
-package com.example.aplicatie_pentru_sala_de_fitness;
+package com.example.rosugabriel;
 
 import android.util.Pair;
 
-import java.time.DayOfWeek;
-import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 
