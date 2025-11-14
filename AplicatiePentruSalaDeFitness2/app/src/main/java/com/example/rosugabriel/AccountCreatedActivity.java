@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.rosugabriel.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class AccountCreatedActivity extends AppCompatActivity {
 
@@ -28,6 +29,15 @@ public class AccountCreatedActivity extends AppCompatActivity {
             return insets;
         });
 
+        // setare floating action button
+        FloatingActionButton floatingActionButton = findViewById(R.id.fab_main);
+
+        floatingActionButton.setOnClickListener(v -> {
+            Toast makeText = Toast.makeText(this, "Butonul a fost apasat", Toast.LENGTH_SHORT);
+            makeText.show();
+        });
+
+
         // Inauntrul metodei onCreate()
         Intent intent = getIntent();
         String email = intent.getStringExtra("email");
@@ -40,6 +50,7 @@ public class AccountCreatedActivity extends AppCompatActivity {
 
         userEmail.setText(email);
         userPhoneNumber.setText(phoneNumber);
+
     }
 
     @Override
@@ -58,6 +69,6 @@ public class AccountCreatedActivity extends AppCompatActivity {
             Toast.makeText(this, "Optiunea 2 a fost selectata", Toast.LENGTH_SHORT).show();
             return true;
         }
-        return super.onOptionsItemSelected(item);
+        return false;
     }
 }
