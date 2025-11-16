@@ -40,6 +40,12 @@ BecomeMemberActivity - este activitatea unde utilizatorul poate selecta orasul i
                      - acesta are un ViewHolder personalizat pentru a putea stoca in View elementele
                        de tip ImageView, TextView
 
+RegisterActivity - este activitatea unde utilizatorul se inregistreaza, dupa ce isi trece datele in formular
+                   se trece la activitatea AccountCreatedActivity.
+
+AccountCreatedActivity - este activitatea unde sunt afisate datele de conectare ale utilizatorului,
+                         are un meniu din care poate selecta optiunile "Despre" sau "Logout"
+                         si un FloatingActionButton cu care poate interactiona
 
 GymAdapter - este o clasa care extinde RecyclerView.Adapter cu un ViewHolder personalizat GymViewHolder
 
