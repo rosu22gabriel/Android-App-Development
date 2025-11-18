@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="extensii_fisiere">
+            <item>zip</item>
+            <item>rar</item>
+            <item>arj</item>
+    </string-array>
+
+</resources>
