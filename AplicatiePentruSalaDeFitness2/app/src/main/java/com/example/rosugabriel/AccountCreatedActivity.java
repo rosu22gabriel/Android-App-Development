@@ -1,5 +1,7 @@
 package com.example.rosugabriel;
 
+import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.rosugabriel.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class AccountCreatedActivity extends AppCompatActivity {
 
@@ -67,6 +72,25 @@ public class AccountCreatedActivity extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.optiune2) {
             Toast.makeText(this, "Optiunea 2 a fost selectata", Toast.LENGTH_SHORT).show();
+            @SuppressLint("StaticFieldLeak") ExtractJSON extractJSON = new ExtractJSON()
+            {
+//                ProgressDialog progressDialog;
+//                @Override
+//                protected void onPreExecute() {
+//                    progressDialog = new ProgressDialog(AccountCreatedActivity.this);
+//                    progressDialog.setMessage("Please wait...");
+//                    progressDialog.show();
+//                }
+//                @Override
+//                protected void onPostExecute(String s) {
+//                    progressDialog.cancel();
+//                }
+            };
+            try {
+                extractJSON.execute(new URL("https://pastebin.com/raw/SwzJD0gJ"));
+            } catch (MalformedURLException e) {
+                throw new RuntimeException(e);
+            }
             return true;
         }
         return false;

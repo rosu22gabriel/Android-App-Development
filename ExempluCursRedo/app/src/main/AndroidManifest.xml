@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExempluCursRedo">
         <activity
+            android:name=".AfisareAvionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

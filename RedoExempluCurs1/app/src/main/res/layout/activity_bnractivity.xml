@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BNRActivity">
+
+    <TextView
+        android:id="@+id/tvDataCurs"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/data"
+        app:layout_constraintEnd_toEndOf="@+id/btnShow"
+        app:layout_constraintStart_toStartOf="@+id/btnShow"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/eur"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <EditText
+        android:id="@+id/editTextEUR"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUSD"
+        app:layout_constraintStart_toStartOf="@+id/editTextUSD"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/usd"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <EditText
+        android:id="@+id/editTextUSD"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGBP"
+        app:layout_constraintStart_toStartOf="@+id/editTextGBP"
+        tools:layout_editor_absoluteY="49dp" />
+
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/gbp"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <EditText
+        android:id="@+id/editTextGBP"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextXAU"
+        app:layout_constraintStart_toStartOf="@+id/editTextXAU"
+        tools:layout_editor_absoluteY="49dp" />
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/xau"
+        app:layout_constraintEnd_toEndOf="@+id/tvExtract"
+        app:layout_constraintStart_toStartOf="@+id/tvExtract"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <EditText
+        android:id="@+id/editTextXAU"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/afisare_curs_valutar"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <Button
+        android:id="@+id/btnExtract"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="@string/extragere_curs_valutar"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEUR"
+        app:layout_constraintStart_toStartOf="@+id/editTextEUR"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/tvExtract"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvDataCurs"
+        app:layout_constraintStart_toStartOf="@+id/tvDataCurs"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

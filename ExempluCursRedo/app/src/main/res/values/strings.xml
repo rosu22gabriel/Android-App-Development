@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ExempluCursRedo</string>
+    <string name="introduceti_data_fabricatiei">Introduceti data fabricatiei!</string>
+    <string name="introduceti_firma_producatoare">Introduceti firma producatoare</string>
+    <string name="selectati_modelul">Selectati modelul</string>
+    <string name="da">DA</string>
+    <string name="nu">NU</string>
+    <string name="adauga_avion">Adauga avion</string>
 </resources>

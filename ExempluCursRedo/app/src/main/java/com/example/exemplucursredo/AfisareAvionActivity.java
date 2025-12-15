@@ -1,6 +1,8 @@
 package com.example.exemplucursredo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +10,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AfisareAvionActivity extends AppCompatActivity {
+
+    List<Avion> avionList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +27,12 @@ public class AfisareAvionActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Intent intent = getIntent();
+
+        Avion avion = (Avion) intent.getSerializableExtra(AddActivity.ADD_AVION);
+
+        ListView listView = findViewById(R.id.listViewAvioane);
+
     }
 }

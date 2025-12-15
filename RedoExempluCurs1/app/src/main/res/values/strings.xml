@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RedoExempluCurs1</string>
+    <string name="activitate_bnr">Activitate BNR</string>
+    <string name="extrage_date_din_xml">Extrage date din XML</string>
+    <string name="extrage_date_din_json">Extrage date din JSON</string>
+    <string name="vizualizare_baza_de_date">Vizualizare baza de date</string>
+    <string name="data">\n\n</string>
+    <string name="eur">\n</string>
+    <string name="usd">\n</string>
+    <string name="gbp" />
+    <string name="xau" />
+    <string name="afisare_curs_valutar">\n</string>
+    <string name="extragere_curs_valutar" />
+</resources>

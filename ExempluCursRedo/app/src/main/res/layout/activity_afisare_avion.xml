@@ -7,4 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".AfisareAvionActivity">
 
+
+    <ListView
+        android:id="@+id/listViewAvioane"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+    </ListView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
