@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExempluCursFaraDepreciate</string>
+    <string name="nume_client">Nume Client</string>
+    <string name="adresa_livrare">Adresa Livrare</string>
+</resources>
